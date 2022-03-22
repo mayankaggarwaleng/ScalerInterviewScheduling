@@ -9,13 +9,13 @@ function App() {
 		{ nm: "JKL", st: null, et: null },
 	]);
 
-	const [Il, setIl] = useState([
-	]);
+	const [Il, setIl] = useState([]);
 	const updateSetIl = (obj) => {
 		let temp = Il;
 		temp = [...temp, obj];
 		setIl(temp);
 	};
+	//works on reload
 	useEffect(() => {}, [Il]);
 	const [lbl, setlbl] = useState("Validate");
 	const func = (e) => {
@@ -24,10 +24,10 @@ function App() {
 			document.getElementById("start-hours").value +
 				document.getElementById("start-minutes").value -
 				(document.getElementById("end-hours").value +
-					document.getElementById("end-minutes").value) <
+					document.getElementById("end-minutes").value) >
 			0
 		) {
-			updateSetIl({
+			func({
 				nm: document.getElementById("pt").value,
 				st:
 					document.getElementById("start-hours").value +
@@ -47,6 +47,7 @@ function App() {
 					<br />
 					<select name="pt" id="pt">
 						<optgroup>
+		//iterate over each element in arrya
 							{pt.map((pt) => {
 								return (
 									<option key={Date.now() + Math.random()} value={pt.nm}>
@@ -80,6 +81,7 @@ function App() {
 			</div>
 			<div className="List">
 				<p className="title">Scheduled interviews:</p>
+//iterate over each element in array
 				{Il.map((iv) => (
 					<div className="list-item" key={iv.id}>
 						<p>{iv.nm}</p>
