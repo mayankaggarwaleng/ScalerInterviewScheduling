@@ -10,7 +10,6 @@ function App() {
 	]);
 
 	const [Il, setIl] = useState([
-		{ nm: "ABC", st: "0730", et: "0800", id: 1232 },
 	]);
 	const updateSetIl = (obj) => {
 		let temp = Il;
