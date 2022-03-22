@@ -24,7 +24,7 @@ function App() {
 			document.getElementById("start-hours").value +
 				document.getElementById("start-minutes").value -
 				(document.getElementById("end-hours").value +
-					document.getElementById("end-minutes").value) >
+					document.getElementById("end-minutes").value) <
 			0
 		) {
 			updateSetIl({
