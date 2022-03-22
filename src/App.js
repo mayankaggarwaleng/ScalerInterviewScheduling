@@ -27,7 +27,7 @@ function App() {
 					document.getElementById("end-minutes").value) >
 			0
 		) {
-			func({
+			updateSetIl({
 				nm: document.getElementById("pt").value,
 				st:
 					document.getElementById("start-hours").value +
